@@ -1,0 +1,17 @@
+[package]
+name = "expression_parser_python"
+version = "0.1.0"
+authors = ["Thomas <thomastimmer11@hotmail.com>"]
+edition = "2018"
+
+[lib]
+name = "expression_parser_python"
+crate-type = ["cdylib"]
+
+[dependencies]
+expression_parser = {path = "../../infix_parser", features = ["serde"]}
+serde-pickle = "0.6"
+
+[dependencies.pyo3]
+version = "0.10.1"
+features = ["extension-module"]

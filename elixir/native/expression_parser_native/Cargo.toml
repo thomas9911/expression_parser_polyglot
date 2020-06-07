@@ -1,0 +1,17 @@
+[package]
+name = "expression_parser_native"
+version = "0.1.0"
+authors = []
+edition = "2018"
+
+[lib]
+name = "expression_parser_native"
+path = "src/lib.rs"
+crate-type = ["dylib"]
+
+[dependencies]
+rustler = "0.21.1"
+serde_rustler = "0.1.0"
+serde_json = "1.0"
+lazy_static = "1.0"
+expression_parser = {path = "../../../../infix_parser", features = ["serde"]}
